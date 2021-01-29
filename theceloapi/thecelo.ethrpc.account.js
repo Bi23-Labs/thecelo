@@ -113,10 +113,10 @@ async function getName(address){
 async function getType(address){
   let type = '';//1:celo_contract_proxy 2:releasegold_contract 3:accountt 4:contrac
   if(thecelo.containsValue(Object.values(theceloconst.Contracts),address))
-    type = 'CeloContract'
+    type = 'Celo Contract'
   else {
     if(celomainnetreleasegoldall.isReleaseGold(address))
-      type = 'Releasegold'
+      type = 'Release Gold'
     else {
       let data = web3.eth.abi.encodeFunctionCall({
           name: 'isAccount',
